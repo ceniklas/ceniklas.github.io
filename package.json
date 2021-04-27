@@ -1,6 +1,6 @@
 {
   "name": "myhomepage",
-  "homepage":"https://ceniklas.github.io/",
+  "homepage": "https://ceniklas.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,7 @@
     "@types/node": "12.0.7",
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
+    "deploy-to-github-pages": "^1.0.1",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

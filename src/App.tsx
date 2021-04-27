@@ -5,7 +5,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <div className="footer">
-        <a className="message" href="marvel.html"></a>
+        <a className="message" href="marvel.html">Marvel</a>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className="message">
           Hi. I'm Niklas Fransson.

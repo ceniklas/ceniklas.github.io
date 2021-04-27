@@ -13,8 +13,3 @@ jobs:
       run: yarn build
     - name: Publish
       run: npx deploy-to-github-pages -d build
-      with:
-        target_branch: master
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        remote_url: https://github.com/appleboy/gh-pages-action.git

@@ -1,5 +1,6 @@
 
 .App {
+  display: flex;
   text-align: center;
   background-image: url(./20181228-IMG_7720-1.jpg);
   background-position: center center;
@@ -10,12 +11,18 @@
   min-height: 100vh;
 }
 
+.footer {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
 .message {
-  position: absolute;
-  float: right; 
-  right: 0;
-  bottom: 0; 
+  display: flex;
+  align-items: flex-end;
   color: #fff;
   padding: 1.5em;
+  margin: 0;
   font-size: calc(20px + 2vmin);
 }

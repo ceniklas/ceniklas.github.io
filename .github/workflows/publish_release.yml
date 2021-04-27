@@ -7,9 +7,32 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+    #- name: Setup git
+    #  uses: fregante/setup-git-user@v1
+    #- name: Setup node
+    #  uses: actions/setup-node@v2
+    #  with:
+    #    node-version: "14"
     - name: Setup
       run: yarn install
     - name: Build
       run: yarn build
-    - name: Publish
-      run: npx deploy-to-github-pages -d build
+    #- name: Publish
+    #  run: "npx deploy-to-github-pages --directory build --token ${{ secrets.GITHUB_TOKEN }} --verbose --branch master --defaultBranch dev"
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: master  # default: gh-pages
+        publish_dir: ./build  # default: public
+        cname: ceniklas.se
+
+#- uses: borales/actions-yarn@v2.0.0
+#  with:
+#    cmd: install # will run `yarn install` command
+#- uses: borales/actions-yarn@v2.0.0
+#  with:
+#    cmd: build # will run `yarn build` command
+#- uses: borales/actions-yarn@v2.0.0
+#  with:
+#    cmd: ci:publish # will run `yarn test` command

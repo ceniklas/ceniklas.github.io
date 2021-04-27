@@ -1,0 +1,20 @@
+name: Publish Release
+on: [push]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup
+      run: yarn install
+    - name: Build
+      run: yarn build
+    - name: Publish
+      run: npx deploy-to-github-pages -d build
+      with:
+        target_branch: master
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        remote_url: https://github.com/appleboy/gh-pages-action.git

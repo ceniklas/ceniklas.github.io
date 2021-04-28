@@ -1,64 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#000000" />
-    <title>Marvel</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <!-- <div id="root"></div> -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="theme-color" content="#000000" />
+  <title>Marvel</title>
+
+  <style>
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
     
-    <pre>
-    Captain America: The First Avenger (2011)
-    <b>Marvels agent Carter season 1 (2015)</b>
-    <b>Marvels agent Carter season 2 (2016)</b>
-    Captain Marvel (2019)
-    Iron Man (2008)
-    Iron Man 2 (2010)
-    The Incredible Hulk (2008)
-    Thor (2011)
-    The Avengers (2012
-    Iron Man 3 (2013)
-    Thor: The Dark World (2013)
-    Captain America: The Winter Soldier (2014)
-    <b>Marvels Agents of SHIELD season 1 (2013)</b>
-    Guardians of the Galaxy (2014)
-    Guardians of the Galaxy Vol. 2 (2017)
-    <b>Daredevil season 1 (2015)</b>
-    Avengers: Age of Ultron (2015)
-    <b>Marvels Agents of SHIELD season 2 (2014)</b>
-    Ant-Man (2015)
-    <b>Jessica Jones season 1 (2015)</b>
-    <b>Daredevil season 2 (2016)</b>
-    Captain America: Civil War (2016)
-    <b>Marvels Agents of SHIELD season 3 (2015)</b>
-    <b>Luke Cage season 1 (2016)</b>
-    Spider-Man: Homecoming (2017)
-    Doctor Strange (2016)
-    Black Panther (2018)
-    <b>Iron Fist season 1 (2017)</b>
-    <b>Marvels Agents of SHIELD season 4 (2016)</b>
-    <b>The Defenders season 1 (2017)</b>
-    <b>The Inhumans season 1 (2017)</b>
-    Thor: Ragnarok (2017)
-    <b>The Punisher season 1 (2017)</b>
-    <b>Jessica Jones season 2 (2018)</b>
-    <b>Luke Cage season 2 (2018)</b>
-    <b>Cloak and Dagger season 1 (2018)</b>
-    <b>The Runaways season 1 (2017)</b>
-    <b>Daredevil season 3 (2018)</b>
-    <b>The Punisher season 2 (2019)</b>
-    <b>Marvels Agents of SHIELD season 5 (2017)</b>
-    <b>Iron Fist season 2 (2018)</b>
-    Ant-Man and The Wasp (2018)
-    Black Widow (2021)
-    Avengers Infinity War (2018)
-    Avengers: Endgame (2019)
-    <b>WandaVision (2021)</b>
-    <b>The Falcon and the Winter Soldier (2021)</b>
-    Spiderman: Far From Home (2019)
-    </pre>
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
     
-  </body>
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+    
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    
+    .toggle-text {
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <!-- <div id="root"></div> -->
+
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Captain America: The First Avenger (2011)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels agent Carter season 1 (2015)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels agent Carter season 2 (2016)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Captain Marvel (2019)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Iron Man (2008)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Iron Man 2 (2010)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      The Incredible Hulk (2008)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Thor (2011)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      The Avengers (2012
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Iron Man 3 (2013)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Thor: The Dark World (2013)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Captain America: The Winter Soldier (2014)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels Agents of SHIELD season 1 (2013)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Guardians of the Galaxy (2014)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Guardians of the Galaxy Vol. 2 (2017)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Daredevil season 1 (2015)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Avengers: Age of Ultron (2015)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels Agents of SHIELD season 2 (2014)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Ant-Man (2015)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Jessica Jones season 1 (2015)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Daredevil season 2 (2016)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Captain America: Civil War (2016)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels Agents of SHIELD season 3 (2015)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Luke Cage season 1 (2016)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Spider-Man: Homecoming (2017)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Doctor Strange (2016)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Black Panther (2018)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Iron Fist season 1 (2017)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels Agents of SHIELD season 4 (2016)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>The Defenders season 1 (2017)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>The Inhumans season 1 (2017)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Thor: Ragnarok (2017)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>The Punisher season 1 (2017)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Jessica Jones season 2 (2018)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Luke Cage season 2 (2018)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Cloak and Dagger season 1 (2018)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>The Runaways season 1 (2017)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Daredevil season 3 (2018)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>The Punisher season 2 (2019)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Marvels Agents of SHIELD season 5 (2017)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>Iron Fist season 2 (2018)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Ant-Man and The Wasp (2018)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Black Widow (2021)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Avengers Infinity War (2018)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Avengers: Endgame (2019)
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>WandaVision (2021)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      <b>The Falcon and the Winter Soldier (2021)</b>
+    </div>
+    <div class="toggle-text">
+      <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+      Spiderman: Far From Home (2019)
+    </div>
+    
+
+</body>
+
 </html>

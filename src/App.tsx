@@ -6,9 +6,9 @@ const App: React.FC = () => {
     <div className="App">
       <div className="footer">
         <div className="linkWrapper">
-          <a className="message" href="cush.html">cush</a>
-          <a className="message" href="executeorder66.html">executeorder66</a>
-          <a className="message" href="marvel.html">Marvel</a>
+          <a className="linkmessage" href="cush.html">cush</a>
+          <a className="linkmessage" href="executeorder66.html">executeorder66</a>
+          <a className="linkmessage" href="marvel.html">Marvel</a>
         </div>
         <h1 className="message">
           Hi. I'm Niklas Fransson.

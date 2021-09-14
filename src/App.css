@@ -34,3 +34,8 @@
   margin: 1rem;
   font-size: 2rem;
 }
+
+.linkwrapper {
+  display: flex;
+  flex-direction: column;
+}

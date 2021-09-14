@@ -26,3 +26,11 @@
   margin: 0;
   font-size: calc(20px + 2vmin);
 }
+
+.linkmessage {
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  margin: 1rem;
+  font-size: 2rem;
+}

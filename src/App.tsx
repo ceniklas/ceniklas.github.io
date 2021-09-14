@@ -5,6 +5,8 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <div className="footer">
+        <a className="message" href="cush.html">cush</a>
+        <a className="message" href="executeorder66.html">executeorder66</a>
         <a className="message" href="marvel.html">Marvel</a>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1 className="message">

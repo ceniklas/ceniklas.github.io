@@ -1,0 +1,25 @@
+(function () {
+  function findScriptTag() {
+    for (var i = 0; i < document.scripts.length; ++i) {
+      if (document.scripts[i].src.indexOf('browserdetect.js') >= 0) {
+        return document.scripts[i];
+      }
+    }
+    return { getAttribute: function () { } };
+  }
+
+  var scriptTag = findScriptTag();
+
+  var minVersionsRaw = scriptTag.getAttribute('data-min-versions') || '{}';
+  var minVersion = JSON.parse(minVersionsRaw.replace(/'/g, '"'));
+
+  var isUnsupportedBrowser = bowser.isUnsupportedBrowser(minVersion);
+
+  if (isUnsupportedBrowser) {
+    var elem = document.getElementById(scriptTag.getAttribute('data-element-id'));
+
+    if (elem) {
+      elem.style.display = 'block';
+    }
+  }
+}());

@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Val2022 from './Val2022';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           Hi. I'm Niklas Fransson.
         </h1>
       </div>
+      <Val2022></Val2022>
     </div>
   );
 }
